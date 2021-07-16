@@ -12,7 +12,7 @@ This repository contains a python script to spawn an `icub-model` in the meshcat
 
 2. Once the environment is created please install pinocchio and meshcat
    ```shell
-   conda install -c conda-forge pinocchio meshcat-python
+   conda install -c conda-forge -c robotology pinocchio meshcat-python icub-models
    ```
 
 3. Now your environment is ready and you can clone this repository
