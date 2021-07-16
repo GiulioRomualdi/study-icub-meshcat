@@ -16,9 +16,12 @@ if __name__ == "__main__":
 
     # Load the URDF model.
     # Conversion with str seems to be necessary when executing this file with ipython
-    model_dir = join(os.environ['CONDA_PREFIX'],"share/iCub")
-    model_path = join(model_dir,"robots/",args.model)
-    mesh_dir = join(model_dir,"iCub/meshes/simmechanics")
+    model_dir = join(os.environ['CONDA_PREFIX'],"share","iCub")
+    if os.name == 'nt':
+        model_dir = join(os.environ['CONDA_PREFIX'],"Library","share","iCub")
+
+    model_path = join(model_dir,"robots",args.model)
+    mesh_dir = join(model_dir,"meshes", "simmechanics")
     urdf_filename = "model.urdf"
     urdf_model_path = join(model_path, urdf_filename)
 
