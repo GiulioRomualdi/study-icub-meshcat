@@ -17,7 +17,7 @@ This repository contains a python script to spawn an `icub-model` in the meshcat
 
 3. Now your environment is ready and you can clone this repository
    ```shell
-   git clone --recurse-submodules https://github.com/GiulioRomualdi/study-icub-meshcat.git
+   git clone https://github.com/GiulioRomualdi/study-icub-meshcat.git
    ```
 
 4. You can finally run the script
