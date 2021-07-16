@@ -14,11 +14,10 @@ if __name__ == "__main__":
     parser.add_argument('-m', '--model', type=str, help='Name of the model. The default value is iCubGazeboV2_5', default="iCubGazeboV2_5")
     args = parser.parse_args()
 
-
     # Load the URDF model.
     # Conversion with str seems to be necessary when executing this file with ipython
-    model_dir = join(dirname(str(abspath(__file__))),"robots")
-    model_path = join(model_dir,"iCub/robots/",args.model)
+    model_dir = join(os.environ['CONDA_PREFIX'],"share/iCub")
+    model_path = join(model_dir,"robots/",args.model)
     mesh_dir = join(model_dir,"iCub/meshes/simmechanics")
     urdf_filename = "model.urdf"
     urdf_model_path = join(model_path, urdf_filename)
